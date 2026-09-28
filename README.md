@@ -1,12 +1,12 @@
 # Praeco2
 
-![GitHub release](https://img.shields.io/github/release/johnsusek/praeco.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/praecoapp/praeco.svg)
-![GitHub stars](https://img.shields.io/github/stars/johnsusek/praeco.svg?style=social&label=Stars)
+<!--![GitHub release](https://img.shields.io/github/release/nsano-rururu/praeco2.svg)-->
+<!--![Docker Pulls](https://img.shields.io/docker/pulls/praecoapp/praeco.svg)-->
+![GitHub stars](https://img.shields.io/github/stars/nsano-rururu/praeco2.svg?style=social&label=Stars)
 
 <img align="left" src="https://user-images.githubusercontent.com/611996/52907999-50fca900-3232-11e9-8aee-40f7dc37ec65.jpg">
 
-**Praeco** is an alerting tool for Elasticsearch – a GUI for [ElastAlert 2](https://github.com/jertel/elastalert2), using the [ElastAlert API](https://github.com/johnsusek/elastalert-server).
+**Praeco** is an alerting tool for Elasticsearch – a GUI for [ElastAlert 2](https://github.com/jertel/elastalert2), using the [ElastAlert API](https://github.com/nsano-rururu/elastalert-server2).
 
 - Interactively build alerts for your Elasticsearch data using a query builder
 - Preview results in an interactive chart
@@ -17,11 +17,6 @@
 - View logs of when your alerts check, fire and fail
 
 <br>
-<br>
-
-👉 Praeco is a completely free GPLv3 project, in return I only ask that you fill out [this simple survey](https://forms.gle/nAbu1RN2KHnyXX7L8) about how you use it.
-
-##
 
 ![](https://user-images.githubusercontent.com/611996/47752071-7c4a9080-dc61-11e8-8ccf-2196f13429b2.png)
 
@@ -45,7 +40,7 @@ docker-compose up
 Praeco should now be available on http://127.0.0.1:8080
 
 ## Upgrading
-
+<!--
 If you use docker-compose.yml published on github as it is, it will be the current latest version instead of a specific version. If you want to specify a specific version, edit it yourself and then run `docker-compose up --force-recreate --build`.
 
 ```
@@ -56,8 +51,8 @@ docker pull praecoapp/praeco:latest
 docker pull praecoapp/elastalert-server:latest
 docker-compose up --force-recreate --build
 ```
-
-You may need to update your config files when a new version comes out. Please see [UPGRADING.md](https://github.com/johnsusek/praeco/blob/master/UPGRADING.md) for version-specific instructions.
+-->
+You may need to update your config files when a new version comes out. Please see [UPGRADING.md]([https://github.com/johnsusek/praeco](https://github.com/nsano-rururu/praeco2)/blob/master/UPGRADING.md) for version-specific instructions.
 
 ## Configuration
 
@@ -78,7 +73,7 @@ The following config settings are available in praeco.config.json:
 "hidePreconfiguredFields": []
 ```
 ## DockerHub
-
+<!--
 [Praeco](https://hub.docker.com/r/praecoapp/praeco)
 
 [ElastAlert Server](https://hub.docker.com/r/praecoapp/elastalert-server)
@@ -86,16 +81,20 @@ The following config settings are available in praeco.config.json:
 [Praeco & elastalert server docker image relations table](https://github.com/johnsusek/praeco/wiki/praeco-&-elastalert-server-docker-image-relations-table)
 
 [praecoapp/elastalert-server ChangeLog](https://github.com/johnsusek/elastalert-server/blob/master/DockerImageLog.md)
-
+-->
 ## FAQ
 
 #### Is there a sample to start elasticsearch, kibana, elastalert-server, Praeco with docker-compose?
 
+<!--
 [docker compose sample(telegram)](https://github.com/johnsusek/praeco/wiki/docker-compose-sample(telegram))
+-->
 
 #### Please tell me the response status of the alert notification destination.
 
+<!--
 👉 [ElastAlert 2 Alerts support status](https://github.com/johnsusek/praeco/wiki/ElastAlert-2-Alerts-support-status)
+-->
 
 #### Will elastalert-server / Praeco be supported forever?
 
@@ -130,8 +129,7 @@ Not Support
 
 #### Doesi support elasticserch 6.x?`
 
-Elasticserch 6 is no longer supported from elastalert2 2.4.0.<br>
-Please use `praecoapp/elastalert-server:20220109` with elastalert2 installed before 2.4.0.
+Not Support
 
 #### Does it support elasticsearch 7.x?
 
@@ -139,13 +137,11 @@ Support
 
 #### Does it support elasticsearch 8.x?
 
-- Supports elasticsearch 8 with praeco 1.8.11 or later.<br>
-- elastalert-server is compatible with elasticsearch 8.
+Support
 
 #### Does it support elasticsearch 9.x?
 
-- Supports elasticsearch 9 with praeco 1.8.21 or later.<br>
-- elastalert-server is compatible with elasticsearch 9.
+Support
 
 #### Can you support a version that is not the latest version?
 
@@ -256,7 +252,7 @@ Edit `config/elastalert.yaml` and uncomment the appropriate lines.
 
 Edit `config/api.config.json` and set/add `"es_ssl": true`.<br>
 option `"ea_verify_certs"`, `"es_ca_certs"`, `"es_client_cert"`, `"es_client_key"`.<br>
-[configuration](https://github.com/johnsusek/elastalert-server#configuration)
+[configuration](https://github.com/nsano-rururu/elastalert-server2#configuration)
 
 #### [elastalert-server] How do I connect to elasticsearch with a username and password?
 
@@ -411,7 +407,7 @@ Sorry Not Support email_format.
 
 Please see https://elastalert2.readthedocs.io/en/latest/ruletypes.html#email for how to configure your `BaseRule.config` file.
 
-[example setting](https://github.com/johnsusek/praeco/issues/245#issuecomment-691523706)
+[example setting](https://github.com/nsano-rururu/praeco2/issues/245#issuecomment-691523706)
 
 Describe the following settings in BaseRule.config. Please set other settings on the screen.
 
@@ -452,7 +448,7 @@ rule files in the rules/ directory.
 
 When you run praeco using the quickstart instructions, it runs these two docker containers, per the docker-compose.yml file.
 
-Praeco uses a fork of the elastalert _api server_, which is why the docker image source is [johnsusek/elastalert-server](https://github.com/johnsusek/elastalert-server).
+Praeco uses a fork of the elastalert _api server_, which is why the docker image source is [nsano-rururu/elastalert-server2](https://github.com/nsano-rururu/praeco2).
 
 NOTE: Only the _api server_ is a fork, the ElastAlert 2 daemon itself is built from the `master` branch whenever a new version of the `johnsusek/elastalert-server` docker image is created.
 
@@ -469,8 +465,8 @@ First, you need a local copy of the elastalert api server running, which itself 
 ```sh
 $ cd
 $ git clone https://github.com/jertel/elastalert2.git
-$ git clone https://github.com/johnsusek/elastalert-server.git
-$ git clone https://github.com/johnsusek/praeco.git
+$ git clone https://github.com/nsano-rururu/elastalert-server2.git
+$ git clone https://github.com/nsano-rururu/praeco2.git
 ```
 
 ### Setting up ElastAlert 2
@@ -583,7 +579,6 @@ If you have any difficulties please open a github issue with your problem.
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/johnsusek"><img src="https://avatars3.githubusercontent.com/u/611996?v=4" width="100px;" alt=""/><br /><sub><b>John Susek</b></sub></a></td>
     <td align="center"><a href="https://github.com/nsano-rururu"><img src="https://avatars1.githubusercontent.com/u/22293449?v=4" width="100px;" alt=""/><br /><sub><b>Naoyuki Sano</b></sub></a></td>
   </tr>
 </table>
