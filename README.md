@@ -1,4 +1,4 @@
-# Praeco
+# Praeco2
 
 ![GitHub release](https://img.shields.io/github/release/johnsusek/praeco.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/praecoapp/praeco.svg)
