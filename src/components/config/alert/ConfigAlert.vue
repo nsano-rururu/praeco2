@@ -541,7 +541,7 @@
       <!-- Gelf -->
       <el-tab-pane v-if="alert.includes('gelf')" :key="'gelf'" name="gelf" label="Gelf">
         <template #label>
-          <span><Icon icon="globe" /> Gelf</span>
+          Gelf
         </template>
         <ConfigAlertGelf ref="gelf" :view-only="viewOnly" />
       </el-tab-pane>
