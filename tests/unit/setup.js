@@ -18,8 +18,7 @@ import router from '@/router';
 Vue.component('ConfigDisableRulesOnError', ConfigDisableRulesOnError);
 Vue.component('ConfigQueryDelay', ConfigQueryDelay);
 
-// Vitest expects global expect, but we can still use chai's expect for compatibility
-import { expect } from 'chai';
+import { expect } from 'vitest';
 global.expect = expect;
 
 config.stubs.transition = false;
