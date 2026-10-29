@@ -1,4 +1,4 @@
-FROM node:26.12.1-bookworm AS base
+FROM node:26.13.0-bookworm AS base
 
 RUN apt update -qqy && \
     apt upgrade -qqy && \
